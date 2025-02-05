@@ -5,6 +5,7 @@ import { FaQuoteLeft, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 export function Testimonials() {
   return (
     <Container fluid className="py-3">
+      {/* Section Title */}
       <h2 className="text-center mb-4 fw-bold" style={{ fontSize: "3rem" }}>
         Testimonials
       </h2>
@@ -21,7 +22,10 @@ export function Testimonials() {
         {/* Left Side Content */}
         <Col xs={12} md={5} className="text-left px-5">
           <div className="mb-4">
-            <FaQuoteLeft className="text-danger" style={{ fontSize: "4rem" }} />
+            <FaQuoteLeft
+              className="text-danger"
+              style={{ fontSize: "4rem", marginBottom: "1rem" }}
+            />
             <h5
               className="d-inline-block mx-3"
               style={{ fontSize: "3.5rem", fontWeight: "bold" }}
@@ -38,8 +42,8 @@ export function Testimonials() {
         {/* Right Side: Testimonial Carousel */}
         <Col xs={12} md={7} className="d-flex justify-content-center">
           <div
-            className="text-center"
-            style={{ width: "100%", maxWidth: "750px" }}
+            className="text-center position-relative"
+            style={{ width: "100%", maxWidth: "850px" }}
           >
             <Carousel
               interval={3000}
@@ -52,15 +56,27 @@ export function Testimonials() {
               {[...Array(3)].map((_, index) => (
                 <Carousel.Item key={index}>
                   <Card
-                    className="p-4 shadow-sm"
+                    className="p-5 shadow-lg position-relative"
                     style={{
                       backgroundColor: "#fde4e4",
                       borderRadius: "1rem",
                       textAlign: "left",
                     }}
                   >
-                    <Card.Body>
-                      <h5 className="text-danger fw-bold">What they say</h5>
+                    <h5
+                      className="text-danger fw-bold fs-9 position-absolute"
+                      style={{
+                        top: "1rem",
+                        left: "1rem",
+                        margin: 0,
+                        padding: "0.5rem 1rem",
+                        borderRadius: "0.5rem",
+                      }}
+                    >
+                      What they say
+                    </h5>
+
+                    <Card.Body style={{ marginTop: "3rem" }}>
                       <blockquote className="blockquote mb-4">
                         <p className="fs-5 fw-semibold">
                           “Studying at WOC is fun, the curriculum is complete,
@@ -69,7 +85,7 @@ export function Testimonials() {
                         </p>
                       </blockquote>
                       <footer>
-                        <p className="fw-bold mb-0">Resky Fernanda</p>
+                        <p className="fw-bold mb-0 fs-5">Resky Fernanda</p>
                         <p className="text-muted">Product Designer at Tokopedia</p>
                       </footer>
                     </Card.Body>
