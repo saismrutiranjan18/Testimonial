@@ -58,13 +58,13 @@ export function Testimonials() {
                   <Card
                     className="p-5 shadow-lg position-relative"
                     style={{
-                      backgroundColor: "#fde4e4",
+                      backgroundColor: "#a01212",
                       borderRadius: "1rem",
                       textAlign: "left",
                     }}
                   >
                     <h5
-                      className="text-danger fw-bold fs-9 position-absolute"
+                      className="text-black fw-bold fs-9 position-absolute"
                       style={{
                         top: "1rem",
                         left: "1rem",
@@ -78,15 +78,15 @@ export function Testimonials() {
 
                     <Card.Body style={{ marginTop: "3rem" }}>
                       <blockquote className="blockquote mb-4">
-                        <p className="fs-5 fw-semibold">
+                        <p className="text-white fs-5 fw-semibold">
                           “Studying at WOC is fun, the curriculum is complete,
                           the instructors are competent, and the assignments
                           given are also relevant to the current scope of work.”
                         </p>
                       </blockquote>
                       <footer>
-                        <p className="fw-bold mb-0 fs-5">Resky Fernanda</p>
-                        <p className="text-muted">Product Designer at Tokopedia</p>
+                        <p className="text-white fw-bold mb-0 fs-5">Resky Fernanda</p>
+                        <p className="text-white">Product Designer at Tokopedia</p>
                       </footer>
                     </Card.Body>
                   </Card>
